@@ -5,13 +5,13 @@
 #include <unistd.h>
 #include <conio.h>
 using namespace std;
-int pilihan();
-int Qwerty(){
+void pilihan();
+void Qwerty(){
 cout<<"\t-----------------------------------------------------------"<<endl;
 }
 //Operasi Input & Output Operator C++
 //1. Penjumlahan (+)
-int penjumlahan(){
+void penjumlahan(){
 int bil1, bil2, hasil;
     cout<<"\n1. Operasi Penjumlahan (+)"<<endl;
     cout<<"   Masukkan bilangan pertama : "; cin>>bil1;
@@ -21,7 +21,7 @@ int bil1, bil2, hasil;
 pilihan();
 }
 //2. pengurangan (-)
-int pengurangan(){
+void pengurangan(){
 int bil1, bil2, hasil; 
     cout<<"\n2. Operasi Pengurangan (-)"<<endl;
     cout<<"   Masukkan bilangan pertama : "; cin>>bil1;
@@ -31,7 +31,7 @@ int bil1, bil2, hasil;
 pilihan();
 }
 //3. Perkalian (*)
-int perkalian(){
+void perkalian(){
 int bil1, bil2, hasil;
     cout<<"\n3. Operasi Perkalian   (*)"<<endl;
     cout<<"   Masukkan bilangan pertama : "; cin>>bil1;
@@ -41,7 +41,7 @@ int bil1, bil2, hasil;
 pilihan();
 }
 //4. Pembagian (/)
-int pembagian(){
+void pembagian(){
 int bil1, bil2, hasil;
     cout<<"\n4. Operasi Pembagian   (/)"<<endl;
     cout<<"   Masukkan bilangan pertama : "; cin>>bil1;
@@ -51,7 +51,7 @@ int bil1, bil2, hasil;
 pilihan();
 }
 //5. Dimodulus (%)
-int mod(){
+void mod(){
 int bil1, bil2, hasil;
     cout<<"\n5. Operasi Modulus (%)"<<endl;
     cout<<"   Masukkan Bilangan Pertama : "; cin>>bil1;
@@ -61,7 +61,7 @@ int bil1, bil2, hasil;
 pilihan();
 }
 //6. Perpangkatan 2 [auto](**)
-int pangkat2(){
+void pangkat2(){
 float bil, hasil;
     cout<<"\n6. Operasi Pangkat 2 (**)"<<endl;
     cout<<"   Masukkan bilangan : "; cin>>bil;
@@ -70,7 +70,7 @@ float bil, hasil;
 pilihan();
 }
 //7. Perpangkatan 3 [auto](***)
-int pangkat3(){
+void pangkat3(){
 float bil, hasil;
     cout<<"\n7. Operasi Pangkat 3 (***)"<<endl;
     cout<<"   Masukkan bilangan : "; cin>>bil;
@@ -79,7 +79,7 @@ float bil, hasil;
 pilihan();
 }
 //8. Perpangkatan Manual (bil1^bil2)
-int pangkatm(){
+void pangkatm(){
     double bil1, bil2, hasil;
     cout<<"\n8. Operasi Perpangkatan Manual (pow)"<<endl;
     cout<<"    Masukan angka pertama : "; cin>>bil1;
@@ -89,7 +89,7 @@ int pangkatm(){
 pilihan();
 }
 //9. Sinus ()
-int sinus(){
+void sinus(){
   double bil, hasil;
   cout<<"\n9. Operasi Sinus"<<endl;
   cout<<"   Masukan nilai sinus : "; cin>>bil;
@@ -98,7 +98,7 @@ int sinus(){
 pilihan();
 }
 //10. Cosinus ()
-int cosinus(){
+void cosinus(){
   double bil, hasil;
   cout<<"\n10. Operasi Cosinus"<<endl;
   cout<<"   Masukan nilai cosinus : "; cin>>bil;
@@ -107,7 +107,7 @@ int cosinus(){
 pilihan();
 }
 //11. Tangen ()
-int tangen(){
+void tangen(){
   double bil, hasil;
   cout<<"\n11. Operasi Tangen"<<endl;
   cout<<"    Masukan nilai tangen"; cin>>bil;
@@ -116,7 +116,7 @@ int tangen(){
 pilihan();
 }
 //49. Informasi Data Developer & How to use this program
-int info(){
+void info(){
     cout<<"\n49. Informasi Developer & Cara penggunaan\n\n";
     cout<<"Nama Pembuat   : Aldi Ananda Prasetya"<<endl;
     cout<<"Tempat Tinggal : Indonesia Jakarta Barat"<<endl;
@@ -130,7 +130,7 @@ int info(){
 pilihan();
 }
 //50. Keluar (out)
-int keluar(){
+void keluar(){
   Qwerty();
     cout<<"Terimakasih Sudah Menggunakan Kalkulator Sederhana ini."<<endl;
     cout<<"Please give me stars and comment if you want to ask something with this calculator."<<endl;
@@ -144,7 +144,7 @@ cout<<"Perintah Anda Salah / Tidak Relevan !"<<endl;
 pilihan();
 }
 //Pilihan (selection)
-int pilihan(){
+void pilihan(){
 float pil;
 cout<<endl;
 cout<<"Masukkan pilihan anda : "; cin>>pil;
