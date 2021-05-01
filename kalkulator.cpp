@@ -6,6 +6,11 @@
 #include <conio.h>
 using namespace std;
 void pilihan();
+// function of prototype
+int balok_volume(double panjang, double lebar, double tinggi);
+int balok_luas(double panjang, double lebar, double tinggi);
+int balok_gabungan(double panjang, double lebar, double tinggi, double panjang1, double lebar2, double tinggi3);
+int faktorial (int n);
 void Qwerty(){
 cout<<"\t-----------------------------------------------------------"<<endl;
 }
@@ -115,6 +120,122 @@ void tangen(){
   cout<<"    Hasil Dari Tangen : "<< bil <<" = "<<hasil<<endl;
 pilihan();
 }
+//12. Logaritma Natural (log)
+int log(){
+    double bil, hasil;
+    cout<<"\n12. Operasi Logaritma (log)"<<endl;
+    cout<<"    Masukan Nilai Logaritma : "; cin>>bil;
+    hasil = log(bil);
+    cout<<"    Hasil Log dari : "<< bil <<" = "<<hasil<<endl;
+pilihan();
+}
+//13. Akar kuadrat (√)
+int akar(){
+    double bil, hasil;
+    cout<<"\n13. Operasi Akar Kuadrat (√)"<<endl;
+    cout<<"    Masukan nilai akar : "; cin>>bil;
+    hasil = sqrt(bil);
+    cout<<"    Hasil dari akar kuadrat : "<< bil <<" = "<<hasil<<endl;
+pilihan();
+}
+//14. Faktorial & prototype
+int faktorial(){
+  int n, hasil;
+  cout<<"\n14.  Operasi Faktorial "<<endl;
+  cout<<"     Masukan nilai dari n :  "; cin>>n;
+  hasil = faktorial (n);
+  cout<<"     Hasil Dari Faktorial n adalah : " << hasil << endl;
+  pilihan(); 
+}
+//15. Kubus
+int kubus(){
+    double a, volume, luas, keliling, sisi;
+    cout<<"\n15. Operasi Kubus "<<endl;
+    cout<<"     Pilih 4 opsi yang ada di bawah: "<<endl;
+    cout<<"1.Volume | 2.Luas | 3.Keliling | 4.Sisi : "; cin >> a;
+    if (a == 1){
+        cout<<"Volume kubus dari angka : "; cin >> sisi;
+        volume = sisi * sisi * sisi * sisi;
+        cout<<"Hasil dari " << sisi << " Adalah: " << volume << endl;
+    } else if (a == 2){
+        cout<<"luas kubus dari angka : "; cin >> sisi;
+        luas = 6 * (sisi * sisi);
+        cout <<"Hasil dari " << sisi << " Adalah: " << luas <<endl;
+    } else if (a == 3){
+        cout <<"Keliling kubus dari angka : "; cin >> sisi;
+        keliling = 12 * sisi;
+        cout <<"Hasil dari " << sisi << " Adalah: " << keliling <<endl;
+    } else if (a == 4){
+        cout <<"Luas salah satu sisi dari angka : "; cin >> sisi;
+        sisi = sisi * sisi;
+        cout <<"Hasil dari " << sisi << " Adalah: " << sisi <<endl;
+    }
+pilihan();
+}
+//16. Balok & prototype
+int balok(){
+    double a, panjang, tinggi, lebar, volume, volume2, volume3, luas, panjang1, lebar2, tinggi3, hasil;
+    cout<<"\n16. Operasi Balok"<<endl;
+    cout<<"    Pilih bebrapa opsi dibawah: "<<endl;
+    cout<<"1. Volume | 2.Luas | 3.Volume Gabungan : "; cin >> a;
+    if (a == 1){
+        cout<<"1.Volume balok dari angka panjang : "; cin >> panjang;
+        cout<<"2.Volume balok dari angka lebar   : "; cin >> lebar;
+        cout<<"3.Volume balok dari angka tinggi  : "; cin >> tinggi;
+        volume = panjang * lebar * tinggi;
+        cout <<"Hasil dari " << panjang << " * " << lebar << " * " << tinggi << " Adalah: " << volume << endl;
+    } else if (a == 2){
+        cout<<"1.Volume balok dari angka panjang : "; cin >> panjang;
+        cout<<"2.Volume balok dari angka lebar   : "; cin >> lebar;
+        cout<<"3.Volume balok dari angka tinggi  : "; cin >> tinggi;
+        luas = balok_luas(panjang,lebar,tinggi);
+        cout <<"Hasil dari inputan" << " Adalah: " << luas << endl;
+    } else if (a == 3){
+        cout<<"Masukan inputan pada bangun ke-1"<<endl;
+        cout<<"1.Input p : "; cin >> panjang;cout<<"l : "; cin >> lebar;cout<<"t : ";  cin >> tinggi;
+        cout<<"Masukan inputan pada bangun ke-2"<<endl;
+        cout<<"2.Input p x l x t : "; cin >> panjang1; cin >> lebar2;  cin >> tinggi3;
+        hasil = balok_gabungan(panjang, lebar, tinggi, panjang1, lebar2, tinggi3);
+        cout <<"Hasil gabungan volume bangun 1 & 2 Adalah: " << hasil << endl;
+    }
+pilihan();
+}
+//17. Suhu
+int suhu(){
+  double celcius, reamur, fahrenheit, kelvin, hasil;
+  cout<<"\n17.  Operasi Satuan Konversi Suhu"<<endl;
+  cout<<"Masukan satuan konversi suhu: "; cin>>celcius;
+  celcius = celcius;
+    cout<<"Celcius = " << celcius << endl;
+  reamur = celcius * 4 / 5;
+    cout<<"Reamur = " << reamur << endl;
+  fahrenheit = celcius * 9 / 5 + 32;
+    cout<<"Fahrenheit = " << fahrenheit << endl;
+  kelvin = celcius + 273;
+  cout<<"Kelvin = " << kelvin << endl;
+pilihan();
+}
+//18. Lingkaran
+int lingkaran(){
+  double a, jari, diameter, keliling, luas, hasil;
+  cout<<"\n18.  Operasi bangun lingkaran"<<endl;
+  cout<<"Masukan Opsi Satuan Konversi "<<endl;
+  cout<<"1.Diameter | 2.Luas | 3.Keliling: "; cin >> a;
+  if (a == 1){
+    cout<<"Masukan angka: "; cin >> jari;
+      diameter = 2 * jari;
+      cout<<"Diameter dari "<<jari<<" Adalah: "<<diameter<<endl;
+  }else if(a == 2){
+      cout<<"Masukan angka: "; cin >> jari;
+      luas = jari * jari * 22/7;
+      cout<<"Keliling dari "<<jari<<" Adalah: "<<luas<<endl;
+  }else if(a == 3){
+      cout<<"Masukan angka: "; cin >> jari;
+      keliling = 2 * 3.14 * jari;
+      cout<<"Keliling dari "<<jari<<" Adalah: "<<keliling<<endl;
+  }
+pilihan();
+}
 //49. Informasi Data Developer & How to use this program
 void info(){
     cout<<"\n49. Informasi Developer & Cara penggunaan\n\n";
@@ -179,25 +300,60 @@ salah();
 }
 }
 int main(int argc, const char* argv[]){
-cout<<"\tProgram Kalkulator Sederhana"<<endl;
+cout<<"\tProgram Kalkulator Sederhana\n";
 cout<<"\t        2 Bilangan\n\n";
-cout<<"Pilih Operator Dasar Aritmatika"<<endl;
-cout<<"-------------------------------"<<endl;
-cout<<"01.  Penjumlahan    05.  Modulus "<<endl;
-cout<<"02.  Pengurangan    06.  Pangkat2"<<endl;
-cout<<"03.  Perkalian      07.  Pangkat3"<<endl;
-cout<<"04.  Pembagian      08.  Perpangkatan "<<endl;
-cout<<"------------------------------------"<<endl;
-cout<<"operator dasar aritmatika lanjutan"<<endl;
-cout<<"------------------------------------"<<endl;
-cout<<"09. Sinus"<<endl;
-cout<<"10. Cosinus"<<endl;
-cout<<"11. Tangen"<<endl;
-cout<<"49. Informasi"<<endl;
-cout<<"50. Keluar"<<endl;
+cout<<"Pilih Operator Dasar Aritmatika\n";
+cout<<"-------------------------------\n";
+cout<<"01.  Penjumlahan    05.  Modulus \n";
+cout<<"02.  Pengurangan    06.  Pangkat2\n";
+cout<<"03.  Perkalian      07.  Pangkat3\n";
+cout<<"04.  Pembagian      08.  Perpangkatan \n";
+cout<<"------------------------------------\n";
+cout<<"operator dasar aritmatika lanjutan\n";
+cout<<"------------------------------------\n";
+cout<<"09. Sinus\n";
+cout<<"10. Cosinus\n";
+cout<<"11. Tangen\n";
+cout<<"12. Logaritma Natural\n";
+cout<<"13. Kuadrat\n";
+cout<<"14. Faktorial\n";
+cout<<"---------------------\n";
+cout<<"Operator complex Lain \n";
+cout<<"---------------------\n";
+cout<<"15. Kubus\n";
+cout<<"16. Balok\n";
+cout<<"17. Suhu\n";
+cout<<"18. Lingkaran\n";
+cout<<"-------------\n";
+cout<<"49. Informasi\n";
+cout<<"50. Keluar\n";
 pilihan();
 
 getch();
 cin.get();
     return 0;
 }
+ // prototype from Balok
+  int balok_volume(double panjang, double lebar, double tinggi){
+    return panjang * lebar * tinggi;
+  }
+  // Prototype from Balok
+  int balok_luas(double panjang, double lebar, double tinggi){
+    return 2*(panjang*lebar*panjang*tinggi*lebar*tinggi);
+  }
+  // Prototype from Balok
+  int balok_gabungan(double panjang, double lebar, double tinggi, double panjang1, double lebar2, double tinggi3){
+      double volume1, volume2, volume3;
+      volume3 = (volume1=panjang*lebar*tinggi,
+       volume2=panjang1*lebar2*tinggi3, 
+       (volume1+volume2));
+      return volume3;
+  }
+  // Prototype from Faktorial 
+  int faktorial (int n){
+    if(n <= 1){
+      return n;
+    } else {
+      return n * faktorial (n - 1);
+    } 
+  }
