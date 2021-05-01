@@ -88,6 +88,33 @@ int pangkatm(){
     cout<<"    Hasil dari Pangkat manual : "<<bil1<<" ^ "<<bil2<<" = "<<hasil<<endl;
 pilihan();
 }
+//9. Sinus ()
+int sinus(){
+  double bil, hasil;
+  cout<<"\n9. Operasi Sinus"<<endl;
+  cout<<"   Masukan nilai sinus : "; cin>>bil;
+  hasil = sin(bil);
+  cout<<"    Hasil Dari Sinus : "<< bil <<" = "<<hasil<<endl;
+pilihan();
+}
+//10. Cosinus ()
+int cosinus(){
+  double bil, hasil;
+  cout<<"\n10. Operasi Cosinus"<<endl;
+  cout<<"   Masukan nilai cosinus : "; cin>>bil;
+  hasil = cos(bil);
+  cout<<"   Hasil Dari Cosinus : "<< bil <<" = "<<hasil<<endl;
+pilihan();
+}
+//11. Tangen ()
+int tangen(){
+  double bil, hasil;
+  cout<<"\n11. Operasi Tangen"<<endl;
+  cout<<"    Masukan nilai tangen"; cin>>bil;
+  hasil = tan(bil);
+  cout<<"    Hasil Dari Tangen : "<< bil <<" = "<<hasil<<endl;
+pilihan();
+}
 //49. Informasi Data Developer & How to use this program
 int info(){
     cout<<"\n49. Informasi Developer & Cara penggunaan\n\n";
@@ -137,6 +164,12 @@ pangkat2();
 pangkat3();
 }else if(pil==8){
 pangkatm(); 
+}else if(pil==9){
+sinus();
+}else if(pil==10){
+cosinus();
+}else if(pil==11){
+tangen();
 }else if(pil==49){
 info();
 }else if(pil==50){
@@ -154,6 +187,12 @@ cout<<"01.  Penjumlahan    05.  Modulus "<<endl;
 cout<<"02.  Pengurangan    06.  Pangkat2"<<endl;
 cout<<"03.  Perkalian      07.  Pangkat3"<<endl;
 cout<<"04.  Pembagian      08.  Perpangkatan "<<endl;
+cout<<"------------------------------------"<<endl;
+cout<<"operator dasar aritmatika lanjutan"<<endl;
+cout<<"------------------------------------"<<endl;
+cout<<"09. Sinus"<<endl;
+cout<<"10. Cosinus"<<endl;
+cout<<"11. Tangen"<<endl;
 cout<<"49. Informasi"<<endl;
 cout<<"50. Keluar"<<endl;
 pilihan();
